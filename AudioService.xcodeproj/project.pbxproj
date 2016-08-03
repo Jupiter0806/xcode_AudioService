@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E568B141D517C2700C41755 /* bgm1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B111D517C2700C41755 /* bgm1.caf */; };
+		9E568B151D517C2700C41755 /* voice 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B121D517C2700C41755 /* voice 1.caf */; };
+		9E568B161D517C2700C41755 /* voice 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B131D517C2700C41755 /* voice 2.caf */; };
+		9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */; };
+		9E78E5C11D50753D006B49BC /* MyAudioMixerInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5C01D50753D006B49BC /* MyAudioMixerInstruction.m */; };
 		9E9ABE921D234F61005CA5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABE911D234F61005CA5CD /* main.m */; };
 		9E9ABE951D234F61005CA5CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABE941D234F61005CA5CD /* AppDelegate.m */; };
 		9E9ABE981D234F61005CA5CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABE971D234F61005CA5CD /* ViewController.m */; };
@@ -14,6 +19,18 @@
 		9E9ABE9D1D234F61005CA5CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABE9C1D234F61005CA5CD /* Images.xcassets */; };
 		9E9ABEA01D234F61005CA5CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABE9E1D234F61005CA5CD /* LaunchScreen.xib */; };
 		9E9ABEAC1D234F61005CA5CD /* AudioServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEAB1D234F61005CA5CD /* AudioServiceTests.m */; };
+		9E9ABEB81D2350F6005CA5CD /* MyAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEB71D2350F6005CA5CD /* MyAudioRecorder.m */; };
+		9E9ABEBA1D235104005CA5CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9ABEB91D235104005CA5CD /* AVFoundation.framework */; };
+		9E9ABEBC1D235CB6005CA5CD /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABEBB1D235CB6005CA5CD /* ReadMe */; };
+		9E9ABEC11D23729B005CA5CD /* MyAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC01D23729B005CA5CD /* MyAudioPlayer.m */; };
+		9E9ABEC51D237BD5005CA5CD /* Jazzy-beat-house-music-track.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC41D237BD5005CA5CD /* Jazzy-beat-house-music-track.caf */; };
+		9E9ABECA1D237DBA005CA5CD /* MyAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */; };
+		9E9ABED01D239922005CA5CD /* funk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABECC1D239922005CA5CD /* funk.mp3 */; };
+		9E9ABED11D239922005CA5CD /* Jazzy-beat-house-music-track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABECD1D239922005CA5CD /* Jazzy-beat-house-music-track.mp3 */; };
+		9E9ABED21D239922005CA5CD /* tk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABECE1D239922005CA5CD /* tk.mp3 */; };
+		9E9ABED31D239922005CA5CD /* toms.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABECF1D239922005CA5CD /* toms.mp3 */; };
+		9E9ABED61D239EA5005CA5CD /* output.pcm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E9ABED51D239EA5005CA5CD /* output.pcm.mp4 */; };
+		9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E568B111D517C2700C41755 /* bgm1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bgm1.caf; path = audio/cafs/bgm1.caf; sourceTree = "<group>"; };
+		9E568B121D517C2700C41755 /* voice 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "voice 1.caf"; path = "audio/cafs/voice 1.caf"; sourceTree = "<group>"; };
+		9E568B131D517C2700C41755 /* voice 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "voice 2.caf"; path = "audio/cafs/voice 2.caf"; sourceTree = "<group>"; };
+		9E78E5BA1D507501006B49BC /* MyAudioMixerInstructionsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstructionsParser.h; path = classes/MyAudioMixerInstructionsParser.h; sourceTree = "<group>"; };
+		9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixerInstructionsParser.m; path = classes/MyAudioMixerInstructionsParser.m; sourceTree = "<group>"; };
+		9E78E5BF1D50753D006B49BC /* MyAudioMixerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstruction.h; path = classes/MyAudioMixerInstruction.h; sourceTree = "<group>"; };
+		9E78E5C01D50753D006B49BC /* MyAudioMixerInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixerInstruction.m; path = classes/MyAudioMixerInstruction.m; sourceTree = "<group>"; };
 		9E9ABE8C1D234F61005CA5CD /* AudioService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9ABE901D234F61005CA5CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E9ABE911D234F61005CA5CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +64,22 @@
 		9E9ABEA51D234F61005CA5CD /* AudioServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9ABEAA1D234F61005CA5CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E9ABEAB1D234F61005CA5CD /* AudioServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioServiceTests.m; sourceTree = "<group>"; };
+		9E9ABEB61D2350F6005CA5CD /* MyAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioRecorder.h; path = classes/MyAudioRecorder.h; sourceTree = "<group>"; };
+		9E9ABEB71D2350F6005CA5CD /* MyAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioRecorder.m; path = classes/MyAudioRecorder.m; sourceTree = "<group>"; };
+		9E9ABEB91D235104005CA5CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9E9ABEBB1D235CB6005CA5CD /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		9E9ABEBF1D23729B005CA5CD /* MyAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioPlayer.h; path = classes/MyAudioPlayer.h; sourceTree = "<group>"; };
+		9E9ABEC01D23729B005CA5CD /* MyAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioPlayer.m; path = classes/MyAudioPlayer.m; sourceTree = "<group>"; };
+		9E9ABEC41D237BD5005CA5CD /* Jazzy-beat-house-music-track.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jazzy-beat-house-music-track.caf"; path = "audio/bgm/Jazzy-beat-house-music-track.caf"; sourceTree = "<group>"; };
+		9E9ABEC81D237DBA005CA5CD /* MyAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioConverter.h; path = classes/MyAudioConverter.h; sourceTree = "<group>"; };
+		9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioConverter.m; path = classes/MyAudioConverter.m; sourceTree = "<group>"; };
+		9E9ABECC1D239922005CA5CD /* funk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = funk.mp3; path = audio/mp3/funk.mp3; sourceTree = "<group>"; };
+		9E9ABECD1D239922005CA5CD /* Jazzy-beat-house-music-track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Jazzy-beat-house-music-track.mp3"; path = "audio/mp3/Jazzy-beat-house-music-track.mp3"; sourceTree = "<group>"; };
+		9E9ABECE1D239922005CA5CD /* tk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tk.mp3; path = audio/mp3/tk.mp3; sourceTree = "<group>"; };
+		9E9ABECF1D239922005CA5CD /* toms.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = toms.mp3; path = audio/mp3/toms.mp3; sourceTree = "<group>"; };
+		9E9ABED51D239EA5005CA5CD /* output.pcm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = output.pcm.mp4; path = audio/mp4/output.pcm.mp4; sourceTree = "<group>"; };
+		9E9ABED81D23A0F0005CA5CD /* MyAudioMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixer.h; path = classes/MyAudioMixer.h; sourceTree = "<group>"; };
+		9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixer.m; path = classes/MyAudioMixer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9ABEBA1D235104005CA5CD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +101,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E568B101D517BEB00C41755 /* cafs */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B111D517C2700C41755 /* bgm1.caf */,
+				9E568B121D517C2700C41755 /* voice 1.caf */,
+				9E568B131D517C2700C41755 /* voice 2.caf */,
+			);
+			name = cafs;
+			sourceTree = "<group>";
+		};
+		9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */ = {
+			isa = PBXGroup;
+			children = (
+				9E78E5BA1D507501006B49BC /* MyAudioMixerInstructionsParser.h */,
+				9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */,
+			);
+			name = MyAudioMixerInstructionsParser;
+			sourceTree = "<group>";
+		};
+		9E78E5BD1D50750B006B49BC /* MyAudioMixerInstruction */ = {
+			isa = PBXGroup;
+			children = (
+				9E78E5BF1D50753D006B49BC /* MyAudioMixerInstruction.h */,
+				9E78E5C01D50753D006B49BC /* MyAudioMixerInstruction.m */,
+			);
+			name = MyAudioMixerInstruction;
+			sourceTree = "<group>";
+		};
 		9E9ABE831D234F61005CA5CD = {
 			isa = PBXGroup;
 			children = (
+				9E9ABEB91D235104005CA5CD /* AVFoundation.framework */,
 				9E9ABE8E1D234F61005CA5CD /* AudioService */,
 				9E9ABEA81D234F61005CA5CD /* AudioServiceTests */,
 				9E9ABE8D1D234F61005CA5CD /* Products */,
@@ -81,6 +151,8 @@
 		9E9ABE8E1D234F61005CA5CD /* AudioService */ = {
 			isa = PBXGroup;
 			children = (
+				9E9ABEC21D237BBE005CA5CD /* audio */,
+				9E9ABEB51D23502E005CA5CD /* classes */,
 				9E9ABE931D234F61005CA5CD /* AppDelegate.h */,
 				9E9ABE941D234F61005CA5CD /* AppDelegate.m */,
 				9E9ABE961D234F61005CA5CD /* ViewController.h */,
@@ -89,6 +161,7 @@
 				9E9ABE9C1D234F61005CA5CD /* Images.xcassets */,
 				9E9ABE9E1D234F61005CA5CD /* LaunchScreen.xib */,
 				9E9ABE8F1D234F61005CA5CD /* Supporting Files */,
+				9E9ABEBB1D235CB6005CA5CD /* ReadMe */,
 			);
 			path = AudioService;
 			sourceTree = "<group>";
@@ -117,6 +190,93 @@
 				9E9ABEAA1D234F61005CA5CD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E9ABEB51D23502E005CA5CD /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E78E5BD1D50750B006B49BC /* MyAudioMixerInstruction */,
+				9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */,
+				9E9ABED71D23A0DC005CA5CD /* MyAudioMixer */,
+				9E9ABEC71D237DA0005CA5CD /* MyAudioConverter */,
+				9E9ABEBE1D237284005CA5CD /* MyAudioPlayer */,
+				9E9ABEBD1D237266005CA5CD /* MyAudioRecorder */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		9E9ABEBD1D237266005CA5CD /* MyAudioRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABEB61D2350F6005CA5CD /* MyAudioRecorder.h */,
+				9E9ABEB71D2350F6005CA5CD /* MyAudioRecorder.m */,
+			);
+			name = MyAudioRecorder;
+			sourceTree = "<group>";
+		};
+		9E9ABEBE1D237284005CA5CD /* MyAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABEBF1D23729B005CA5CD /* MyAudioPlayer.h */,
+				9E9ABEC01D23729B005CA5CD /* MyAudioPlayer.m */,
+			);
+			name = MyAudioPlayer;
+			sourceTree = "<group>";
+		};
+		9E9ABEC21D237BBE005CA5CD /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B101D517BEB00C41755 /* cafs */,
+				9E9ABED41D239E9A005CA5CD /* mp4 */,
+				9E9ABECB1D239348005CA5CD /* mp3 */,
+				9E9ABEC31D237BC4005CA5CD /* bgm */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
+		9E9ABEC31D237BC4005CA5CD /* bgm */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABEC41D237BD5005CA5CD /* Jazzy-beat-house-music-track.caf */,
+			);
+			name = bgm;
+			sourceTree = "<group>";
+		};
+		9E9ABEC71D237DA0005CA5CD /* MyAudioConverter */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABEC81D237DBA005CA5CD /* MyAudioConverter.h */,
+				9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */,
+			);
+			name = MyAudioConverter;
+			sourceTree = "<group>";
+		};
+		9E9ABECB1D239348005CA5CD /* mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABECC1D239922005CA5CD /* funk.mp3 */,
+				9E9ABECD1D239922005CA5CD /* Jazzy-beat-house-music-track.mp3 */,
+				9E9ABECE1D239922005CA5CD /* tk.mp3 */,
+				9E9ABECF1D239922005CA5CD /* toms.mp3 */,
+			);
+			name = mp3;
+			sourceTree = "<group>";
+		};
+		9E9ABED41D239E9A005CA5CD /* mp4 */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABED51D239EA5005CA5CD /* output.pcm.mp4 */,
+			);
+			name = mp4;
+			sourceTree = "<group>";
+		};
+		9E9ABED71D23A0DC005CA5CD /* MyAudioMixer */ = {
+			isa = PBXGroup;
+			children = (
+				9E9ABED81D23A0F0005CA5CD /* MyAudioMixer.h */,
+				9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */,
+			);
+			name = MyAudioMixer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +359,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9ABEBC1D235CB6005CA5CD /* ReadMe in Resources */,
 				9E9ABE9B1D234F61005CA5CD /* Main.storyboard in Resources */,
+				9E9ABED31D239922005CA5CD /* toms.mp3 in Resources */,
+				9E9ABED01D239922005CA5CD /* funk.mp3 in Resources */,
+				9E568B141D517C2700C41755 /* bgm1.caf in Resources */,
+				9E9ABED21D239922005CA5CD /* tk.mp3 in Resources */,
 				9E9ABEA01D234F61005CA5CD /* LaunchScreen.xib in Resources */,
+				9E9ABED61D239EA5005CA5CD /* output.pcm.mp4 in Resources */,
 				9E9ABE9D1D234F61005CA5CD /* Images.xcassets in Resources */,
+				9E568B161D517C2700C41755 /* voice 2.caf in Resources */,
+				9E9ABED11D239922005CA5CD /* Jazzy-beat-house-music-track.mp3 in Resources */,
+				9E568B151D517C2700C41755 /* voice 1.caf in Resources */,
+				9E9ABEC51D237BD5005CA5CD /* Jazzy-beat-house-music-track.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +391,13 @@
 			files = (
 				9E9ABE981D234F61005CA5CD /* ViewController.m in Sources */,
 				9E9ABE951D234F61005CA5CD /* AppDelegate.m in Sources */,
+				9E9ABEB81D2350F6005CA5CD /* MyAudioRecorder.m in Sources */,
+				9E78E5C11D50753D006B49BC /* MyAudioMixerInstruction.m in Sources */,
+				9E9ABECA1D237DBA005CA5CD /* MyAudioConverter.m in Sources */,
+				9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */,
 				9E9ABE921D234F61005CA5CD /* main.m in Sources */,
+				9E9ABEC11D23729B005CA5CD /* MyAudioPlayer.m in Sources */,
+				9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AudioService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AudioService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +590,7 @@
 				9E9ABEB11D234F61005CA5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E9ABEB21D234F61005CA5CD /* Build configuration list for PBXNativeTarget "AudioServiceTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +599,7 @@
 				9E9ABEB41D234F61005CA5CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

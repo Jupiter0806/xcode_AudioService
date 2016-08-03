@@ -8,8 +8,42 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "MyAudioRecorder.h"
+#import "MyAudioPlayer.h"
+#import "MyAudioConverter.h"
+#import "MyAudioMixer.h"
 
+#import "MyAudioMixerInstructionsParser.h"
+
+@interface ViewController : UIViewController {
+    MyAudioRecorder *recorder;
+    
+    MyAudioPlayer *player;
+    
+    
+}
+
+
+- (IBAction) recorder_startTapped:(id)sender;
+- (IBAction) recorder_stopTapped:(id)sender;
+- (IBAction) recorder_showPathTapped:(id)sender;
+- (IBAction) recorder_deleteTapped:(id)sender;
+
+- (IBAction) player_playRecordTapped:(id)sender;
+- (IBAction) player_playBGMTapped:(id)sender;
+- (IBAction) player_stopTapped:(id)sender;
+
+- (IBAction) convert_convertTapped:(id)sender;
+
+- (IBAction) mix_converNMixTapped:(id)sender;
+- (IBAction) mix_recordNMixBGMTapped:(id)sender;
+- (IBAction) mix_record_playBGMTapped:(id)sender;
+- (IBAction) mix_stop_mixBGMTapped:(id)sender;
+
+- (IBAction) parse_parse:(id)sender;
+- (IBAction) parse_nextInstruction:(id)sender;
+
+- (IBAction) complex_mix:(id)sender;
 
 @end
 
