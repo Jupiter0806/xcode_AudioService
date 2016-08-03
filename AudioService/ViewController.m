@@ -231,7 +231,7 @@
     [parser getNextInstructionWithMSPostion:100000 bgmIndex:&index bgmOffsetInMS:&bgmOffsetInMs whetherNeedBGM:&needBGM];
 
     
-    NSLog(@"Parser.");   
+    NSLog(@"Parser.");
 }
 
 // -------------------------------------------------------------------------------------------------------------------
