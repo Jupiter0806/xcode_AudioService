@@ -1,1 +1,58 @@
 Error handling seems not very qulity.
+
+add complex mix following instructions.
+
+Previosly, using plain string as instruction, but as the complexity insreased when volume control added, changed to using json string.
+A sample json string is "[{\"startPosition\":100, \"endPosition\":200, \"bgmFileUrl\":\"%@\", \"volumeControl\":[{\"startPosition\":0, \"endPosition\":50, \"volumeLevel\":50},{\"startPosition\":50, \"endPosition\":100, \"volumeLevel\":100}]}, {\"startPosition\":300, \"endPosition\":5000, \"bgmFileUrl\":\"%@\", \"volumeControl\":[{\"startPosition\":0, \"endPosition\":1000, \"volumeLevel\":150},{\"startPosition\":1000, \"endPosition\":2000, \"volumeLevel\":50}]}]"
+Notice every emelement enclosed by qutoe markers.
+A human friendly view is:
+[
+    {
+        "startPosition":1000,
+        "endPosition":2000,
+        "bgmFileUrl":"/path/to/bgm",
+        "volumeControl":[
+            {
+                "startPosition":0,
+                "endPosition":500,
+                "volumeLevel":50
+            },
+            {
+                "startPosition":501,
+                "endPosition":1000,
+                "volumeLevel":100
+            }
+        ]
+    },
+    {
+        "startPosition":3000,
+        "endPosition":5000,
+        "bgmFileUrl":"/path/to/bgm",
+        "volumeControl":[
+            {
+                "startPosition":0,
+                "endPosition":1000,
+                "volumeLevel":100
+            },
+            {
+                "startPosition":1001,
+                "endPosition":2000,
+                "volumeLevel":50
+            }
+        ]
+    }
+]
+
+Able to handle instructions has repeat bgm url, system will not access the file twice, instead only once.
+
+JSONParser is not in use as the result of parsing is a NSArray rather than NSDictionary, and JSONParser cannot handle this.
+
+Supposed to create a new class to parse volume control as an object, but for the reason of lack of time, may implement later.
+
+Comment code of complex_mix with parsing which using string instructions.
+
+Rid off button json parse touch down action as previously it is used to test complex_mix_json.
+
+The percison of packetd location seems good, but might be not quite precise. Plus volume control need more test on the volume level.
+
+Then test again. Passed.

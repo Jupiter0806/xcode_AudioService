@@ -13,7 +13,7 @@
 
 #import "MyAudioMixer.h"
 
-#define MAX_BGMS 20
+#define MAX_BGMS 40
 
 static inline void mix_buffers(const int16_t *buffer1,
                                const int16_t *buffer2,
@@ -29,6 +29,49 @@ static inline void mix_buffers(const int16_t *buffer1,
             s2 = (buffer2[i] << 8) | (buffer2[i] >> 8);
         } else {
             s2 = buffer2[i];
+        }
+        
+        int16_t mixed;
+        
+        if (s1 < 0 && s2 < 0) {
+            mixed = (s1 + s2) - ((s1 * s2) / INT16_MIN);
+        } else if (s1 > 0 && s2 > 0) {
+            mixed = (s1 + s2) - ((s1 * s2) / INT16_MAX);
+        } else {
+            mixed = s1 + s2;
+        }
+        
+        mixbuffer[i] = mixed;
+    }
+}
+
+static inline void mix_buffers_volumeControl(const int16_t *buffer1,
+                                             const int16_t *buffer2,
+                                             const int16_t volumeLevel,
+                                             int16_t *mixbuffer,
+                                             int mixbufferNumSamples,
+                                             BOOL shouldSwap)
+{
+    for (int i = 0; i < mixbufferNumSamples; i++) {
+        int16_t s1 = buffer1[i];
+        
+        int16_t s2;
+        if (shouldSwap) {
+            s2 = (buffer2[i] << 8) | (buffer2[i] >> 8);
+        } else {
+            s2 = buffer2[i];
+        }
+        
+        // volume controle
+        // less than 100 sound attenuation
+        // greater than 100 sould gain
+        int16_t s2_gained = s2 * (volumeLevel / 100);
+        if (s2_gained > INT16_MAX) {
+            s2 = INT16_MAX;
+        } else if (s2_gained < INT16_MIN) {
+            s2 = INT16_MIN;
+        } else {
+            s2 = s2_gained;
         }
         
         int16_t mixed;
@@ -364,10 +407,10 @@ reterr:
     return status;
 }
 
-+ (OSStatus) complexMixFilesWithInstructions: (NSString *)instructions_str voiceFileUrl:(NSString *)voiceFileUrl mixFileUrl:(NSString *)mixFileUrl {
++ (OSStatus) complexMixFilesWithInstructions: (NSString *)instructions_json_str voiceFileUrl:(NSString *)voiceFileUrl mixFileUrl:(NSString *)mixFileUrl {
     NSLog(@"Mix files under instructions.");
     
-    MyAudioMixerInstructionsParser *instructions = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructions:instructions_str];
+    MyAudioMixerInstructionsParser *instructions = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructionsJSON:instructions_json_str];
     
     OSStatus status, close_status;
     
@@ -512,9 +555,10 @@ reterr:
     
     // find the correct bgm
     int bgmIndex = 0,
-    bgmOffsetInMs = 0,
-    previousBGMIndex = -1; // store last time bgm index, if previous and current index are the diffeent, bgm packet number need to be initialised to offset
+    previousBGMIndex = -1;      // store last time bgm index, if previous and current index are the diffeent, bgm packet number need to be initialised to offset
+    UInt64 bgmOffsetInMs = 0;
     bool needBGM = false;
+    int volumeLevel = 100;
     
     while (true) {
         // Read a chunk of input
@@ -523,7 +567,7 @@ reterr:
         UInt32 voiceFileNumPacket = 0; // number of packets about to read
         UInt32 bgmFileNumPacket = 0; // number of packets about to read
         
-        [instructions getNextInstructionWithMSPostion:(int)(voiceFilePacketNum / PACKETS_PER_10MS) bgmIndex:&bgmIndex bgmOffsetInMS:&bgmOffsetInMs whetherNeedBGM:&needBGM];
+        [instructions getNextInstructionWithMSPostion:(int)(voiceFilePacketNum / PACKETS_PER_10MS) bgmIndex:&bgmIndex bgmOffsetInMS:&bgmOffsetInMs whetherNeedBGM:&needBGM volumeLevel:&volumeLevel];
         
         // to check whether need to initialised bgmFilePacketNum
         if (previousBGMIndex != bgmIndex) {
@@ -600,7 +644,7 @@ reterr:
         int numSamples = (maxNumPackets * mixFileDataFormat.mBytesPerPacket) / sizeof(int16_t);
         
         // if two input files are encoded in different endian, then change bgm to voice's encode
-        mix_buffers((const int16_t *)voicebuffer, (const int16_t *)bgmbuffer, (int16_t *)mixbuffer, numSamples, !(isVoiceFileBigEndian == isBGMFilesBigEndian[bgmIndex]));
+        mix_buffers_volumeControl((const int16_t *)voicebuffer, (const int16_t *)bgmbuffer, (const int16_t)volumeLevel, (int16_t *)mixbuffer, numSamples, !(isVoiceFileBigEndian == isBGMFilesBigEndian[bgmIndex]));
         
         
         // write the mixed packets to the output file

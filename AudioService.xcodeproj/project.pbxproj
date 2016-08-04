@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E568B201D51CA3200C41755 /* funk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B1C1D51CA3200C41755 /* funk.mp3 */; };
+		9E568B211D51CA3200C41755 /* Jazzy-beat-house-music-track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B1D1D51CA3200C41755 /* Jazzy-beat-house-music-track.mp3 */; };
+		9E568B221D51CA3200C41755 /* tk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B1E1D51CA3200C41755 /* tk.mp3 */; };
+		9E568B231D51CA3200C41755 /* toms.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B1F1D51CA3200C41755 /* toms.mp3 */; };
+		9E568B271D51CA3E00C41755 /* bgm1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B241D51CA3E00C41755 /* bgm1.caf */; };
+		9E568B281D51CA3E00C41755 /* voice 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B251D51CA3E00C41755 /* voice 1.caf */; };
+		9E568B291D51CA3E00C41755 /* voice 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B261D51CA3E00C41755 /* voice 2.caf */; };
+		9E568B2C1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B2B1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf */; };
+		9E568B2E1D51CA5600C41755 /* output.pcm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */; };
 		9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */; };
 		9E78E5C11D50753D006B49BC /* MyAudioMixerInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5C01D50753D006B49BC /* MyAudioMixerInstruction.m */; };
 		9E9ABE921D234F61005CA5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABE911D234F61005CA5CD /* main.m */; };
@@ -22,6 +31,7 @@
 		9E9ABEC11D23729B005CA5CD /* MyAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC01D23729B005CA5CD /* MyAudioPlayer.m */; };
 		9E9ABECA1D237DBA005CA5CD /* MyAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */; };
 		9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */; };
+		9EA6A1B51D52B6DA0075EAFE /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E568B1C1D51CA3200C41755 /* funk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = funk.mp3; path = audio/mp3/funk.mp3; sourceTree = "<group>"; };
+		9E568B1D1D51CA3200C41755 /* Jazzy-beat-house-music-track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Jazzy-beat-house-music-track.mp3"; path = "audio/mp3/Jazzy-beat-house-music-track.mp3"; sourceTree = "<group>"; };
+		9E568B1E1D51CA3200C41755 /* tk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tk.mp3; path = audio/mp3/tk.mp3; sourceTree = "<group>"; };
+		9E568B1F1D51CA3200C41755 /* toms.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = toms.mp3; path = audio/mp3/toms.mp3; sourceTree = "<group>"; };
+		9E568B241D51CA3E00C41755 /* bgm1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bgm1.caf; path = audio/cafs/bgm1.caf; sourceTree = "<group>"; };
+		9E568B251D51CA3E00C41755 /* voice 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "voice 1.caf"; path = "audio/cafs/voice 1.caf"; sourceTree = "<group>"; };
+		9E568B261D51CA3E00C41755 /* voice 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "voice 2.caf"; path = "audio/cafs/voice 2.caf"; sourceTree = "<group>"; };
+		9E568B2B1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jazzy-beat-house-music-track.caf"; path = "audio/bgm/Jazzy-beat-house-music-track.caf"; sourceTree = "<group>"; };
+		9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = output.pcm.mp4; path = audio/mp4/output.pcm.mp4; sourceTree = "<group>"; };
 		9E78E5BA1D507501006B49BC /* MyAudioMixerInstructionsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstructionsParser.h; path = classes/MyAudioMixerInstructionsParser.h; sourceTree = "<group>"; };
 		9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixerInstructionsParser.m; path = classes/MyAudioMixerInstructionsParser.m; sourceTree = "<group>"; };
 		9E78E5BF1D50753D006B49BC /* MyAudioMixerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstruction.h; path = classes/MyAudioMixerInstruction.h; sourceTree = "<group>"; };
@@ -62,6 +81,8 @@
 		9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioConverter.m; path = classes/MyAudioConverter.m; sourceTree = "<group>"; };
 		9E9ABED81D23A0F0005CA5CD /* MyAudioMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixer.h; path = classes/MyAudioMixer.h; sourceTree = "<group>"; };
 		9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixer.m; path = classes/MyAudioMixer.m; sourceTree = "<group>"; };
+		9EA6A1B31D52B6DA0075EAFE /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONParser.h; path = classes/JSONParser.h; sourceTree = "<group>"; };
+		9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONParser.m; path = classes/JSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +104,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E568B171D51C9B600C41755 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B1B1D51CA2500C41755 /* mp4s */,
+				9E568B1A1D51CA1D00C41755 /* bmgs */,
+				9E568B191D51CA0800C41755 /* cafs */,
+				9E568B181D51C9F100C41755 /* mp3s */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
+		9E568B181D51C9F100C41755 /* mp3s */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B1C1D51CA3200C41755 /* funk.mp3 */,
+				9E568B1D1D51CA3200C41755 /* Jazzy-beat-house-music-track.mp3 */,
+				9E568B1E1D51CA3200C41755 /* tk.mp3 */,
+				9E568B1F1D51CA3200C41755 /* toms.mp3 */,
+			);
+			name = mp3s;
+			sourceTree = "<group>";
+		};
+		9E568B191D51CA0800C41755 /* cafs */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B241D51CA3E00C41755 /* bgm1.caf */,
+				9E568B251D51CA3E00C41755 /* voice 1.caf */,
+				9E568B261D51CA3E00C41755 /* voice 2.caf */,
+			);
+			name = cafs;
+			sourceTree = "<group>";
+		};
+		9E568B1A1D51CA1D00C41755 /* bmgs */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B2B1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf */,
+			);
+			name = bmgs;
+			sourceTree = "<group>";
+		};
+		9E568B1B1D51CA2500C41755 /* mp4s */ = {
+			isa = PBXGroup;
+			children = (
+				9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */,
+			);
+			name = mp4s;
+			sourceTree = "<group>";
+		};
 		9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				9E9ABEB51D23502E005CA5CD /* classes */,
+				9E568B171D51C9B600C41755 /* audio */,
 				9E9ABE931D234F61005CA5CD /* AppDelegate.h */,
 				9E9ABE941D234F61005CA5CD /* AppDelegate.m */,
 				9E9ABE961D234F61005CA5CD /* ViewController.h */,
@@ -166,6 +236,7 @@
 		9E9ABEB51D23502E005CA5CD /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				9EA6A1B21D52B67E0075EAFE /* JSONParser */,
 				9E78E5BD1D50750B006B49BC /* MyAudioMixerInstruction */,
 				9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */,
 				9E9ABED71D23A0DC005CA5CD /* MyAudioMixer */,
@@ -210,6 +281,15 @@
 				9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */,
 			);
 			name = MyAudioMixer;
+			sourceTree = "<group>";
+		};
+		9EA6A1B21D52B67E0075EAFE /* JSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				9EA6A1B31D52B6DA0075EAFE /* JSONParser.h */,
+				9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */,
+			);
+			name = JSONParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,10 +372,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E568B271D51CA3E00C41755 /* bgm1.caf in Resources */,
+				9E568B211D51CA3200C41755 /* Jazzy-beat-house-music-track.mp3 in Resources */,
+				9E568B231D51CA3200C41755 /* toms.mp3 in Resources */,
 				9E9ABEBC1D235CB6005CA5CD /* ReadMe in Resources */,
+				9E568B2C1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf in Resources */,
+				9E568B201D51CA3200C41755 /* funk.mp3 in Resources */,
 				9E9ABE9B1D234F61005CA5CD /* Main.storyboard in Resources */,
 				9E9ABEA01D234F61005CA5CD /* LaunchScreen.xib in Resources */,
 				9E9ABE9D1D234F61005CA5CD /* Images.xcassets in Resources */,
+				9E568B2E1D51CA5600C41755 /* output.pcm.mp4 in Resources */,
+				9E568B281D51CA3E00C41755 /* voice 1.caf in Resources */,
+				9E568B291D51CA3E00C41755 /* voice 2.caf in Resources */,
+				9E568B221D51CA3200C41755 /* tk.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +410,7 @@
 				9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */,
 				9E9ABE921D234F61005CA5CD /* main.m in Sources */,
 				9E9ABEC11D23729B005CA5CD /* MyAudioPlayer.m in Sources */,
+				9EA6A1B51D52B6DA0075EAFE /* JSONParser.m in Sources */,
 				9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

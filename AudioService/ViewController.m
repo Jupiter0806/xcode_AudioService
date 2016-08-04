@@ -207,20 +207,21 @@
 //
 // -------------------------------------------------------------------------------------------------------------------
 
-- (IBAction) parse_parse:(id)sender {
-    NSString *sampleInstruction_str = @"80,78300,/path/to/bgm1,0;90000,91000,/path/to/bgm2,0;900300,910030,/path/to/bgm2,0;";
-    
-    MyAudioMixerInstructionsParser *parser = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructions:sampleInstruction_str];
-    
-    NSLog(@"Parser.");
-}
+//- (IBAction) parse_parse:(id)sender {
+//    NSString *sampleInstruction_str = @"80,78300,/path/to/bgm1,0;90000,91000,/path/to/bgm2,0;900300,910030,/path/to/bgm2,0;";
+//    
+//    MyAudioMixerInstructionsParser *parser = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructions:sampleInstruction_str];
+//    
+//    NSLog(@"Parser.");
+//}
 
 - (IBAction) parse_nextInstruction:(id)sender {
     NSString *sampleInstruction_str = @"80,78300,/path/to/bgm1,0;90000,91000,/path/to/bgm2,0;";
     
     MyAudioMixerInstructionsParser *parser = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructions:sampleInstruction_str];
     
-    int index, bgmOffsetInMs;
+    int index;
+    UInt64 bgmOffsetInMs;
     bool needBGM;
     
     [parser getNextInstructionWithMSPostion:20 bgmIndex:&index bgmOffsetInMS:&bgmOffsetInMs whetherNeedBGM:&needBGM];
@@ -239,13 +240,24 @@
 //  Complex mix
 //
 // -------------------------------------------------------------------------------------------------------------------
-- (IBAction) complex_mix:(id)sender {
-    NSString *sampleInstruction_str = [NSString stringWithFormat:@"1000,2000,%@,0;3000,4000,%@,0;5000,8000,%@,0;", [self getBGM2FilePath], [self getBGMFilePath], [self getBGM2FilePath]];
+//- (IBAction) complex_mix:(id)sender {
+//    NSString *sampleInstruction_str = [NSString stringWithFormat:@"1000,2000,%@,0;3000,4000,%@,0;5000,8000,%@,0;", [self getBGM2FilePath], [self getBGMFilePath], [self getBGM2FilePath]];
+//    NSString *voiceFileUrl = [self getVoiceFilePath];
+//    NSString *mixFileUrl = [self getMixURL];
+//
+//    [MyAudioMixer complexMixFilesWithInstructions:sampleInstruction_str voiceFileUrl:voiceFileUrl mixFileUrl:mixFileUrl];
+//
+//}
+
+- (IBAction) complex_mix_json_instr:(id)sender {
+    NSString *json_instr = [NSString stringWithFormat:@"[{\"startPosition\":100, \"endPosition\":200, \"bgmFileUrl\":\"%@\", \"volumeControl\":[{\"startPosition\":0, \"endPosition\":50, \"volumeLevel\":50},{\"startPosition\":50, \"endPosition\":100, \"volumeLevel\":100}]}, {\"startPosition\":300, \"endPosition\":5000, \"bgmFileUrl\":\"%@\", \"volumeControl\":[{\"startPosition\":0, \"endPosition\":1000, \"volumeLevel\":150},{\"startPosition\":1000, \"endPosition\":2000, \"volumeLevel\":50}]}]", [self getBGMFilePath], [self getBGM2FilePath]];
+    
+    MyAudioMixerInstructionsParser *parser = [[MyAudioMixerInstructionsParser alloc] initWithAudioMixerInstructionsJSON:json_instr];
+    
     NSString *voiceFileUrl = [self getVoiceFilePath];
     NSString *mixFileUrl = [self getMixURL];
-
-    [MyAudioMixer complexMixFilesWithInstructions:sampleInstruction_str voiceFileUrl:voiceFileUrl mixFileUrl:mixFileUrl];
-
+    
+    [MyAudioMixer complexMixFilesWithInstructions:json_instr voiceFileUrl:voiceFileUrl mixFileUrl:mixFileUrl];
 }
 
 // -------------------------------------------------------------------------------------------------------------------

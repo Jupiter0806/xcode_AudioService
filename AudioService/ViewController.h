@@ -44,6 +44,9 @@
 - (IBAction) parse_nextInstruction:(id)sender;
 
 - (IBAction) complex_mix:(id)sender;
+- (IBAction) complex_mix_json_instr:(id)sender;
+
+
 
 @end
 

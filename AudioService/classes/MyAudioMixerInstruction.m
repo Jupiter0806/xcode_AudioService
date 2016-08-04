@@ -25,4 +25,18 @@
     return self;
 }
 
+- (id) initWithNSDictionaryInstruction: (NSDictionary *)instruction {
+    NSLog(@"Init an instruction.");
+
+    self = [super init];
+    
+    _startPosition = [[instruction objectForKey:@"startPosition"] integerValue];
+    _endPosition = [[instruction objectForKey:@"endPosition"] integerValue];
+    _bgmFileUrl = [instruction objectForKey:@"bgmFileUrl"];
+    _offset = [[instruction objectForKey:@"offset"] integerValue];
+    _volumeControl = [instruction objectForKey:@"volumeControl"];
+    
+    return self;
+}
+
 @end

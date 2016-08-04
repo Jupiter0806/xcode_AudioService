@@ -10,11 +10,13 @@
 
 @interface MyAudioMixerInstruction : NSObject
 
-@property (readonly) NSInteger startPosition;
-@property (readonly) NSInteger endPosition;
-@property (readonly) NSInteger offset;
+@property (readonly) UInt64 startPosition;
+@property (readonly) UInt64 endPosition;
+@property (readonly) UInt64 offset;
 @property (readonly) NSString *bgmFileUrl;
+@property (readonly) NSArray *volumeControl;
 
 - (id) initWithNSStringInstruction: (NSString *)instruction;
+- (id) initWithNSDictionaryInstruction: (NSDictionary *)instruction;
 
 @end
