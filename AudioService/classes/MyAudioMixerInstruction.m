@@ -10,6 +10,7 @@
 
 @implementation MyAudioMixerInstruction
 
+// not in user, the first version instruction
 - (id) initWithNSStringInstruction: (NSString *)instruction {
     NSLog(@"Init an instruction.");
     

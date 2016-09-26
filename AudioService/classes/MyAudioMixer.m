@@ -65,7 +65,8 @@ static inline void mix_buffers_volumeControl(const int16_t *buffer1,
         // volume controle
         // less than 100 sound attenuation
         // greater than 100 sould gain
-        int16_t s2_gained = s2 * (volumeLevel / 100);
+        float volumeRate = volumeLevel / 100.0;
+        int16_t s2_gained = (int16_t)(s2 * volumeRate);
         if (s2_gained > INT16_MAX) {
             s2 = INT16_MAX;
         } else if (s2_gained < INT16_MIN) {

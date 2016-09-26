@@ -16,6 +16,7 @@
 		9E568B291D51CA3E00C41755 /* voice 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B261D51CA3E00C41755 /* voice 2.caf */; };
 		9E568B2C1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B2B1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf */; };
 		9E568B2E1D51CA5600C41755 /* output.pcm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */; };
+		9E6AFBD41D595FFA00915F64 /* MyAudioRecorderAndPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6AFBD31D595FFA00915F64 /* MyAudioRecorderAndPlayer.m */; };
 		9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */; };
 		9E78E5C11D50753D006B49BC /* MyAudioMixerInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E78E5C01D50753D006B49BC /* MyAudioMixerInstruction.m */; };
 		9E9ABE921D234F61005CA5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABE911D234F61005CA5CD /* main.m */; };
@@ -32,6 +33,9 @@
 		9E9ABECA1D237DBA005CA5CD /* MyAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABEC91D237DBA005CA5CD /* MyAudioConverter.m */; };
 		9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */; };
 		9EA6A1B51D52B6DA0075EAFE /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */; };
+		9EC608981D98C22F00A58E97 /* MyAudioEditorInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC608971D98C22F00A58E97 /* MyAudioEditorInstruction.m */; };
+		9EC6089D1D98C3F300A58E97 /* MyAudioEditorInstructionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6089C1D98C3F300A58E97 /* MyAudioEditorInstructionParser.m */; };
+		9EC608A11D98E74400A58E97 /* MyAudioEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC608A01D98E74400A58E97 /* MyAudioEditor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,8 @@
 		9E568B261D51CA3E00C41755 /* voice 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "voice 2.caf"; path = "audio/cafs/voice 2.caf"; sourceTree = "<group>"; };
 		9E568B2B1D51CA4D00C41755 /* Jazzy-beat-house-music-track.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jazzy-beat-house-music-track.caf"; path = "audio/bgm/Jazzy-beat-house-music-track.caf"; sourceTree = "<group>"; };
 		9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = output.pcm.mp4; path = audio/mp4/output.pcm.mp4; sourceTree = "<group>"; };
+		9E6AFBD21D595FFA00915F64 /* MyAudioRecorderAndPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioRecorderAndPlayer.h; path = classes/MyAudioRecorderAndPlayer.h; sourceTree = "<group>"; };
+		9E6AFBD31D595FFA00915F64 /* MyAudioRecorderAndPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioRecorderAndPlayer.m; path = classes/MyAudioRecorderAndPlayer.m; sourceTree = "<group>"; };
 		9E78E5BA1D507501006B49BC /* MyAudioMixerInstructionsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstructionsParser.h; path = classes/MyAudioMixerInstructionsParser.h; sourceTree = "<group>"; };
 		9E78E5BB1D507501006B49BC /* MyAudioMixerInstructionsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixerInstructionsParser.m; path = classes/MyAudioMixerInstructionsParser.m; sourceTree = "<group>"; };
 		9E78E5BF1D50753D006B49BC /* MyAudioMixerInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioMixerInstruction.h; path = classes/MyAudioMixerInstruction.h; sourceTree = "<group>"; };
@@ -83,6 +89,12 @@
 		9E9ABED91D23A0F0005CA5CD /* MyAudioMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioMixer.m; path = classes/MyAudioMixer.m; sourceTree = "<group>"; };
 		9EA6A1B31D52B6DA0075EAFE /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONParser.h; path = classes/JSONParser.h; sourceTree = "<group>"; };
 		9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONParser.m; path = classes/JSONParser.m; sourceTree = "<group>"; };
+		9EC608961D98C22F00A58E97 /* MyAudioEditorInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioEditorInstruction.h; path = classes/MyAudioEditorInstruction.h; sourceTree = "<group>"; };
+		9EC608971D98C22F00A58E97 /* MyAudioEditorInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioEditorInstruction.m; path = classes/MyAudioEditorInstruction.m; sourceTree = "<group>"; };
+		9EC6089B1D98C3F300A58E97 /* MyAudioEditorInstructionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioEditorInstructionParser.h; path = classes/MyAudioEditorInstructionParser.h; sourceTree = "<group>"; };
+		9EC6089C1D98C3F300A58E97 /* MyAudioEditorInstructionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioEditorInstructionParser.m; path = classes/MyAudioEditorInstructionParser.m; sourceTree = "<group>"; };
+		9EC6089F1D98E74400A58E97 /* MyAudioEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAudioEditor.h; path = classes/MyAudioEditor.h; sourceTree = "<group>"; };
+		9EC608A01D98E74400A58E97 /* MyAudioEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyAudioEditor.m; path = classes/MyAudioEditor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,15 @@
 				9E568B2D1D51CA5600C41755 /* output.pcm.mp4 */,
 			);
 			name = mp4s;
+			sourceTree = "<group>";
+		};
+		9E6AFBD01D594CF500915F64 /* MyAudioRecorderAndPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				9E6AFBD21D595FFA00915F64 /* MyAudioRecorderAndPlayer.h */,
+				9E6AFBD31D595FFA00915F64 /* MyAudioRecorderAndPlayer.m */,
+			);
+			name = MyAudioRecorderAndPlayer;
 			sourceTree = "<group>";
 		};
 		9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */ = {
@@ -236,6 +257,10 @@
 		9E9ABEB51D23502E005CA5CD /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				9EC6089E1D98E72C00A58E97 /* MyAudioEditor */,
+				9EC6089A1D98C3E000A58E97 /* MyAudioEditorInstructionParser */,
+				9EC608951D98C20000A58E97 /* MyAudioEditorInstruction */,
+				9E6AFBD01D594CF500915F64 /* MyAudioRecorderAndPlayer */,
 				9EA6A1B21D52B67E0075EAFE /* JSONParser */,
 				9E78E5BD1D50750B006B49BC /* MyAudioMixerInstruction */,
 				9E78E5B91D507498006B49BC /* MyAudioMixerInstructionsParser */,
@@ -290,6 +315,33 @@
 				9EA6A1B41D52B6DA0075EAFE /* JSONParser.m */,
 			);
 			name = JSONParser;
+			sourceTree = "<group>";
+		};
+		9EC608951D98C20000A58E97 /* MyAudioEditorInstruction */ = {
+			isa = PBXGroup;
+			children = (
+				9EC608961D98C22F00A58E97 /* MyAudioEditorInstruction.h */,
+				9EC608971D98C22F00A58E97 /* MyAudioEditorInstruction.m */,
+			);
+			name = MyAudioEditorInstruction;
+			sourceTree = "<group>";
+		};
+		9EC6089A1D98C3E000A58E97 /* MyAudioEditorInstructionParser */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6089B1D98C3F300A58E97 /* MyAudioEditorInstructionParser.h */,
+				9EC6089C1D98C3F300A58E97 /* MyAudioEditorInstructionParser.m */,
+			);
+			name = MyAudioEditorInstructionParser;
+			sourceTree = "<group>";
+		};
+		9EC6089E1D98E72C00A58E97 /* MyAudioEditor */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6089F1D98E74400A58E97 /* MyAudioEditor.h */,
+				9EC608A01D98E74400A58E97 /* MyAudioEditor.m */,
+			);
+			name = MyAudioEditor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,14 +456,18 @@
 			files = (
 				9E9ABE981D234F61005CA5CD /* ViewController.m in Sources */,
 				9E9ABE951D234F61005CA5CD /* AppDelegate.m in Sources */,
+				9EC608981D98C22F00A58E97 /* MyAudioEditorInstruction.m in Sources */,
 				9E9ABEB81D2350F6005CA5CD /* MyAudioRecorder.m in Sources */,
 				9E78E5C11D50753D006B49BC /* MyAudioMixerInstruction.m in Sources */,
+				9EC6089D1D98C3F300A58E97 /* MyAudioEditorInstructionParser.m in Sources */,
 				9E9ABECA1D237DBA005CA5CD /* MyAudioConverter.m in Sources */,
 				9E78E5BC1D507501006B49BC /* MyAudioMixerInstructionsParser.m in Sources */,
 				9E9ABE921D234F61005CA5CD /* main.m in Sources */,
+				9EC608A11D98E74400A58E97 /* MyAudioEditor.m in Sources */,
 				9E9ABEC11D23729B005CA5CD /* MyAudioPlayer.m in Sources */,
 				9EA6A1B51D52B6DA0075EAFE /* JSONParser.m in Sources */,
 				9E9ABEDA1D23A0F0005CA5CD /* MyAudioMixer.m in Sources */,
+				9E6AFBD41D595FFA00915F64 /* MyAudioRecorderAndPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

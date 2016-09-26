@@ -262,6 +262,29 @@
 
 // -------------------------------------------------------------------------------------------------------------------
 //
+//  Editor
+//
+// -------------------------------------------------------------------------------------------------------------------
+- (IBAction)editor_cut_audio:(id)sender {
+    NSString *sampleInstructionsString = @"79,579;989,1489;3200,4350;";
+    
+    UInt64 testTimePosition[15] = {50, 79, 400, 579, 700, 989, 1000, 1489, 1500, 2000, 2500, 4000, 4350, 5000, 6304};
+    
+    
+    MyAudioEditorInstructionParser *editorInstruction = [[MyAudioEditorInstructionParser alloc] initWithAudioEditorInstructionsString:sampleInstructionsString];
+    
+    for (int i = 0; i < 15; i++) {
+        NSLog(@"Should time point %llu be skipped: %hhu", testTimePosition[i] ,[editorInstruction ifNeedSkipAt:testTimePosition[i]]);
+    }
+
+    bool res = [MyAudioEditor cutAudioWithInstructions:[self getBGMFilePath] instructions:editorInstruction outputFileUrl:[self getEditedURL]];
+    if (!res) {
+        NSLog(@"Edit audio failed.");
+    }
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+//
 //  Helper functions
 //
 // -------------------------------------------------------------------------------------------------------------------
@@ -342,6 +365,10 @@
 
 - (NSString *) getMixURL {
     return [[self getDeviceDocumentDirectory] stringByAppendingPathComponent:@"Mix.caf"];
+}
+
+- (NSString *) getEditedURL {
+    return [[self getDeviceDocumentDirectory] stringByAppendingPathComponent:@"Edited.caf"];
 }
 
 - (BOOL) playBGM {

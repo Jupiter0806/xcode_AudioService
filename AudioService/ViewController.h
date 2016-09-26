@@ -14,6 +14,9 @@
 #import "MyAudioMixer.h"
 
 #import "MyAudioMixerInstructionsParser.h"
+#import "MyAudioEditorInstructionParser.h"
+
+#import "MyAudioEditor.h"
 
 @interface ViewController : UIViewController {
     MyAudioRecorder *recorder;
@@ -46,7 +49,7 @@
 - (IBAction) complex_mix:(id)sender;
 - (IBAction) complex_mix_json_instr:(id)sender;
 
-
+- (IBAction) editor_cut_audio:(id)sender;
 
 @end
 

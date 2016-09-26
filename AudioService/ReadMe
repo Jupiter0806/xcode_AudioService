@@ -56,3 +56,12 @@ Rid off button json parse touch down action as previously it is used to test com
 The percison of packetd location seems good, but might be not quite precise. Plus volume control need more test on the volume level.
 
 Then test again. Passed.
+
+Add audio editor to cut audio.
+
+The sample instructions
+"79,579;989,1489;3200,4350;"
+written in plain string. Instituted of end and start pairs separated by ',' and different instructions
+separated by '.'.
+
+Did very basic test and passed.
