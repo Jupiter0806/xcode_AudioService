@@ -46,7 +46,8 @@
 
 #define BUFFER_SIZE 1764 // to read 441 packets
     char *audioFileBuffer = NULL;
-    char *outputFileBuffer = NULL;
+    // do not need outputFileBuffer as the content in audioFileBuffer is exactly what we need to write to output file
+//    char *outputFileBuffer = NULL;
 
     status = AudioFileOpenURL((__bridge CFURLRef)audioNSUrl, kAudioFileReadPermission, 0, &audioFile);
     if (status) {
@@ -88,8 +89,10 @@
 
     audioFileBuffer = malloc(BUFFER_SIZE);
     assert(audioFileBuffer);
-    outputFileBuffer = malloc(BUFFER_SIZE);
-    assert(outputFileBuffer);
+    // do not need outputFileBuffer as the content in audioFileBuffer is exactly what we need to write to output file
+
+//    outputFileBuffer = malloc(BUFFER_SIZE);
+//    assert(outputFileBuffer);
 
     SInt64 audioFilePacketNumber = 0;
     SInt64 outputFilePacketNumber = 0;
@@ -112,6 +115,11 @@
             goto reterr;
         }
 
+        if (audioFileNumberPacketsRead == 0) {
+            // reach the end of audio file, terminate it
+            break;
+        }
+
         // if buffer was not filled, file with zeros
         //  buffer1 + bytesRead1 means &(buffer1[bytesRead1])
         if (audioFileByteRead < BUFFER_SIZE) {
@@ -123,10 +131,11 @@
         if ([instructions ifNeedSkipAt:(int)(audioFilePacketNumber / PACKETS_PER_10MS)]) {
 
         } else {
-            outputFileBuffer = audioFileBuffer;
+            // do not need outputFileBuffer as the content in audioFileBuffer is exactly what we need to write to output file
+//            outputFileBuffer = audioFileBuffer;
 
             UInt32 packetsWritten = audioFileNumberPacketsRead;
-            status = AudioFileWritePackets(outputFile, false, (audioFileNumberPacketsRead * outputDataFormat.mBytesPerPacket), NULL, outputFilePacketNumber, &packetsWritten, outputFileBuffer);
+            status = AudioFileWritePackets(outputFile, false, (audioFileNumberPacketsRead * outputDataFormat.mBytesPerPacket), NULL, outputFilePacketNumber, &packetsWritten, audioFileBuffer);
 
             if (status) {
                 NSLog(@"Write to output file failed at packet number: %lld", outputFilePacketNumber);
@@ -156,9 +165,10 @@ reterr:
     if (audioFileBuffer != NULL) {
         free(audioFileBuffer);
     }
-    if (outputFileBuffer != NULL) {
-        free(outputFileBuffer);
-    }
+    // do not need outputFileBuffer as the content in audioFileBuffer is exactly what we need to write to output file
+//    if (outputFileBuffer != NULL) {
+//        free(outputFileBuffer);
+//    }
 
     return res;
 }
